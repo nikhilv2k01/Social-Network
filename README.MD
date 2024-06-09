@@ -23,7 +23,7 @@ This project is a social networking application API built with Django Rest Frame
 ### Clone the Repository
 
 bash
-git clone https://github.com/nikhilv2k01/Social-Network.git
+git clone --single-branch --branch devbranch https://github.com/nikhilv2k01/Social-Network.git
 cd social_network
 
 
