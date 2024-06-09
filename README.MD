@@ -78,7 +78,8 @@ List Pending Friend Requests: GET /api/pending-requests/
 
 ### Usage
 ### Postman Collection
-Import the provided Social Network Collection (https://api.postman.com/collections/20809430-f0bb48ce-ae42-4ad2-a805-345d8e3f7699?access_key=PMAT-01HZYPMBEX72B01V0KM8T566M2) to quickly test the API endpoints. The collection includes all available endpoints with example requests.
+
+Import the provided Social Network Collection (https://api.postman.com/collections/20809430-f0bb48ce-ae42-4ad2-a805-345d8e3f7699?access_key=ENTER THE KEY) to quickly test the API endpoints. The collection includes all available endpoints with example requests.
 
 ### Rate Limiting
 Users can send up to 3 friend requests within a minute. If this limit is exceeded, a 429 Too Many Requests response will be returned.
