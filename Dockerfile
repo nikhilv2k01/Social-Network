@@ -1,27 +1,23 @@
-# Use the official Python image from the Docker Hub
-FROM python:3.9-slim
+# Use an official Python runtime as a parent image
+FROM python:3.9
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Set the working directory in the container
-WORKDIR /code
+WORKDIR /app
 
-# Copy the requirements file into the container
-COPY requirements.txt /code/
-
-# Install dependencies
+# Upgrade pip and install dependencies
+COPY requirements.txt /app/
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application code into the container
-COPY . /code/
+# Copy the current directory contents into the container at /app
+COPY . /app/
 
-# Set environment variables for Django settings
-ENV DJANGO_SETTINGS_MODULE=social_network.settings
-
-# Expose the port that the app runs on
+# Expose port 8000
 EXPOSE 8000
 
-# Run the Django development server
+# Run the application
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
